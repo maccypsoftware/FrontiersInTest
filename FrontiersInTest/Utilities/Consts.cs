@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.Design.Serialization;
-
-namespace FrontiersInTest.Utilities
+﻿namespace FrontiersInTest.Utilities
 {
     public class Consts
     {
