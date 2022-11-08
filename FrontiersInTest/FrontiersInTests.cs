@@ -47,7 +47,15 @@ namespace FrontiersInTest
         [TestCleanup]
         public void EdgeDriverCleanup()
         {
-            _driver.Quit();
+            try
+            {
+                _driver.Quit();
+                _driver.Close();
+            }
+            catch (Exception)
+            {
+                // Ignore errors if we are unable to close the browser
+            }
         }
     }
 }

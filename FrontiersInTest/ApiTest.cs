@@ -24,7 +24,10 @@ namespace FrontiersInTest
 
             string currentDate = DateTime.Now.ToString(Consts.DateFormat, CultureInfo.InvariantCulture);
 
-            Assert.AreEqual(currentDate, deserializedResponse.UtcDatetime.ToString(Consts.DateFormat, CultureInfo.InvariantCulture));
+            Assert.AreEqual(
+                currentDate, 
+                deserializedResponse.UtcDatetime.ToString(Consts.DateFormat, CultureInfo.InvariantCulture),
+                "Date not match - check used city in test!");
         }
     }
 }
