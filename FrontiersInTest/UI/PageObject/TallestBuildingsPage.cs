@@ -11,7 +11,7 @@ namespace FrontiersInTest.PageObject
         private readonly IWebDriver driver;
         private IWebElement SearchList => driver.FindElement(By.CssSelector("select[name='list']"));
 
-        private IWebElement BuildingList => driver.FindElement(By.XPath("(//table[@id='buildingsTable'])[1]"));
+        private IWebElement BuildingsTable => driver.FindElement(By.XPath("(//table[@id='buildingsTable'])[1]"));
 
         public TallestBuildingsPage(IWebDriver driver)
         {
@@ -27,7 +27,7 @@ namespace FrontiersInTest.PageObject
         public List<BuildingModel> GetTableOfBuildings()
         {
             var buildingsList = new List<BuildingModel>();
-            var lstTrElem = new List<IWebElement>(BuildingList.FindElements(By.TagName("tr")));
+            var lstTrElem = new List<IWebElement>(BuildingsTable.FindElements(By.TagName("tr")));
             string strRowData;
 
             // Traverse each row

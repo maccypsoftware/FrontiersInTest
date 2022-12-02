@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrontiersInTest.Models
+namespace FrontiersInTest.API.Models
 {
     public class DateModel
     {

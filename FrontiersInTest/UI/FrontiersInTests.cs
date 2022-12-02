@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 using System;
 using System.Linq;
 
-namespace FrontiersInTest
+namespace FrontiersInTest.UI
 {
     [TestClass]
     public class FrontiersInTests
@@ -48,9 +48,9 @@ namespace FrontiersInTest
         public void EdgeDriverCleanup()
         {
             try
-            {
-                _driver.Quit();
+            {                
                 _driver.Close();
+                _driver.Quit();
             }
             catch (Exception)
             {
